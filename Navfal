@@ -1,0 +1,91 @@
+*********// JAVA BEGINNING DAY - 1 //********
+
+
+
+
+import java.util.*;
+import java.lang.*;
+
+public class Main {
+
+    public static void main(String[] args){
+//         arrays();
+//         fibonacci(1);
+
+//         ModuleMe mod = new ModuleMe();
+//         System.out.println("Value of C is " + mod.mathit());
+
+//        startQuiz();
+
+
+
+        int arru[] = {84,46,77,11};
+        Arrays.sort(arru);
+        System.out.println(arru.length);
+        System.out.println(Arrays.toString(arru));
+
+
+    }
+
+    public static void fibonacci(int m){
+        int first = 0, second = 1;
+
+        if(m == 1){
+            System.out.println(first);
+            System.exit(0);
+        }
+
+        System.out.println(first);
+        System.out.println(second);
+        int third;
+        int n = 1;
+        while (n <= (m-2)){
+            third = first + second;
+            System.out.println(third);
+            first = second;
+            second = third;
+            n++;
+        }
+
+    }
+
+
+
+    public static void arrays(){
+
+        int arr[] = {1, 2, 3, 4, 5, 6, 7, 8};
+
+        for (int i = 0; i < arr.length; i++)
+        {
+            if (arr[i] > 5)
+            {
+                System.out.println("exit...");
+
+                // Terminate JVM
+                System.exit(0);
+            }
+            else
+                System.out.println("arr["+i+"] = " +
+                        arr[i]);
+        }
+        System.out.println("End of Program");
+    }
+
+
+    public static void startQuiz() {
+        Scanner in = new Scanner(System.in);
+
+        System.out.println("What is the capital of India?");
+        String s = in.nextLine();
+        System.out.println("You entered " + s);
+
+         if(s == "New Delhi")
+             System.out.println("Correct Answer");
+         else
+             System.out.println("Wrong Answer");
+
+
+
+
+    }
+}
